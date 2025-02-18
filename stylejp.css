@@ -1,0 +1,200 @@
+* {
+    color: white;
+    box-sizing: border-box; /* Adicionando box-sizing para garantir um layout mais previsível */
+}
+
+.container-jp, .container-02 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    width: 90%;
+    background-color: transparent;
+    padding: 40px;
+    position: relative;
+    border-radius: 10px;
+    top: -450px;
+    margin: 300px auto;
+    min-height: 400px; /* Usar min-height ao invés de height fixa */
+}
+
+/* Animações de entrada */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate {
+    animation: fadeInUp 1s ease-in-out forwards;
+    opacity: 0;
+}
+
+.texto, .text-box {
+    flex: 1;
+    padding-right: 20px;
+    min-width: 250px;
+}
+
+.texto-cima, .titulo {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.texto-baixo, .descricao {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.imagem, .img-box {
+    flex: 1;
+    min-width: 250px;
+}
+
+.imagem {
+    text-align: right;
+    margin-left: 20px;
+}
+
+.img-box {
+    text-align: left;
+    margin-right: 20px;
+}
+
+.imagem img, .img-box img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.img-style, .img-style2 {
+    transition: ease 0.2s;
+}
+
+.img-style2:hover {
+    transform: scale(1.08);
+}
+
+.img-style:hover {
+    transform: scale(1.08);
+}
+
+.titulo {
+    text-align: center;
+}
+
+.container4 {
+    position: relative;
+    margin-top: 100px; /* Garantindo que o container4 tenha um espaçamento adequado do conteúdo anterior */
+    top: 0;
+}
+
+.sub-text {
+    border: solid 2px white;
+    padding: 12px;
+    border-radius: 20px;
+    transition: 0.5s ease;
+    width: 480px;
+    margin-left: 30px;
+}
+
+.sub-text:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 2px 2px 20px rgba(255, 255, 255, 0.355);
+}
+
+/* Media Queries para telas menores */
+@media (max-width: 1024px) {
+    .container-jp, .container-02 {
+        flex-direction: column;
+        padding: 20px;
+        margin: 100px auto;
+        top: 0;
+    }
+
+    .texto, .text-box {
+        padding-right: 0;
+        min-width: 100%;
+    }
+
+    .imagem, .img-box {
+        text-align: center;
+        margin-top: 20px;
+        margin-left: 0;
+        margin-right: 0;
+        min-width: 100%;
+    }
+
+    .texto-cima, .titulo {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .texto-baixo, .descricao {
+        font-size: 16px;
+    }
+
+    .sub-text {
+        width: 100%; /* Faz o botão ocupar toda a largura em telas pequenas */
+        margin-left: 0;
+    }
+}
+
+/* Ajustes para telas ainda menores (ex: smartphones) */
+@media (max-width: 768px) {
+    .container-jp, .container-02 {
+        flex-direction: column;
+        padding: 20px;
+        margin: 50px auto; /* Menor margem em telas menores */
+        top: 0;
+    }
+
+    .texto, .text-box {
+        padding-right: 0;
+        min-width: 100%;
+    }
+
+    .imagem, .img-box {
+        text-align: center;
+        margin-top: 20px;
+        margin-left: 0;
+        margin-right: 0;
+        min-width: 100%;
+    }
+
+    .texto-cima, .titulo {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .texto-baixo, .descricao {
+        font-size: 14px;
+    }
+
+    .sub-text {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+/* Adicionando animações quando o usuário scrollar a página */
+.container-jp, .container-02, .container4, .section-examples {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+.container-jp.animate, .container-02.animate, .container4.animate, .section-examples.animate {
+    opacity: 1;
+}
+
+.container-jp.animate{
+    /* margin-bottom: -200px; */
+}

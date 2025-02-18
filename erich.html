@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="./erich/assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="./erich/assets/img/favicon.png">
+  <title>
+    Portfolio - Erich H Rinaldi
+  </title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <link href="./erich/assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="./erich/assets/css/blk-design-system.css?v=1.0.0" rel="stylesheet" />
+  <link href="./erich/assets/demo/demo.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      
+      ScrollReveal({ reset: true });
+
+    
+      ScrollReveal().reveal('h1, h3', {
+        duration: 2000,
+        origin: 'top',
+        distance: '50px',
+        scale: 0.8,
+        rotate: { x: 0, y: 80, z: 0 }
+      });
+
+      
+      ScrollReveal().reveal('#about-me', {
+        origin: 'left',
+        distance: '100px',
+        duration: 1500,
+        delay: 200,
+        easing: 'ease-in-out'
+      });
+
+     
+      ScrollReveal().reveal('.marquee-item', {
+        duration: 1000,
+        interval: 200,
+        scale: 0.5,
+        opacity: 0.8
+      });
+
+      
+      document.querySelectorAll('.col-md-6').forEach((element, index) => {
+        ScrollReveal().reveal(element, {
+          duration: 1500,
+          scale: 0.9,
+          distance: '50px',
+          origin: index % 2 === 0 ? 'left' : 'right'
+        });
+      });
+
+      ScrollReveal().reveal('.card-register', {
+        duration: 1800,
+        origin: 'bottom',
+        distance: '50px',
+        scale: 0.95
+      });
+    });
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .img-raised {
+      width: 400px;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    section {
+      scroll-margin-top: 80px;
+    }
+
+    .typing {
+      border-right: 2px solid white;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 1%;
+      animation: typing 6s steps(30, end) forwards, blink 0.6s infinite;
+    }
+
+    .marquee {
+      overflow: hidden;
+      white-space: nowrap;
+      padding: 10px 0;
+      width: 100%;
+    }
+
+    .marquee-content {
+      display: inline-block;
+      animation: scroll 20s linear infinite;
+    }
+
+    .marquee-item {
+      display: inline-block;
+      margin-right: 30px;
+      font-size: 24px;
+      font-weight: bold;
+      font-size: 80px;
+      filter: grayscale(98%);
+    }
+
+    .marquee-item:hover {
+      filter: grayscale(0%);
+    }
+
+    @keyframes scroll {
+      from {
+        transform: translateX(100%);
+      }
+
+      to {
+        transform: translateX(-100%);
+      }
+    }
+
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+
+      to {
+        width: 100%;
+      }
+    }
+
+    @keyframes blink {
+      50% {
+        border-color: transparent;
+      }
+    }
+  </style>
+</head>
+
+<body class="index-page d-flex flex-column min-vh-100">
+  <div class="wrapper flex-grow-1"></div>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top navbar-transparent " color-on-scroll="100">
+    <div class="container">
+      <div class="navbar-translate">
+        <a class="navbar-brand" href="#">
+          <span>EHRV•</span>Full Stack Developer
+        </a>
+        <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+          aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-bar bar1"></span>
+          <span class="navbar-toggler-bar bar2"></span>
+          <span class="navbar-toggler-bar bar3"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse justify-content-end" id="navigation">
+        <div class="navbar-collapse-header">
+          <div class="row">
+            <div class="col-6 collapse-brand">
+              <a>
+                EHRV
+              </a>
+            </div>
+            <div class="col-6 collapse-close text-right">
+              <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navigation"
+                aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="tim-icons icon-simple-remove"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <ul class="navbar-nav">
+          <li class="nav-item p-0">
+            <a class="nav-link" rel="tooltip" data-placement="bottom" href="https://wa.me/5518996220308" target="_blank"
+              target="_blank">
+              <i class="fab fa-whatsapp"></i>
+              <p class="d-lg-none d-xl-none">WhatsApp</p>
+            </a>
+          </li>
+          <li class="nav-item p-0">
+            <a class="nav-link" rel="tooltip" data-placement="bottom"
+              href="https://www.linkedin.com/in/erich-rinaldi-140205258/" target="_blank">
+              <i class="fab fa-linkedin"></i>
+              <p class="d-lg-none d-xl-none">Linkedin</p>
+            </a>
+          </li>
+          <li class="nav-item p-0">
+            <a class="nav-link" rel="tooltip" href="https://github.com/Erich-z" target="_blank">
+              <i class="fab fa-github"></i>
+              <p class="d-lg-none d-xl-none">Github</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-default d-none d-lg-block" href="#about-me">
+              Sobre
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-default d-none d-lg-block" href="#projects">
+              Projetos
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-default d-none d-lg-block" href="#contact">
+              Contato
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- End Navbar -->
+  <div class="wrapper">
+    <!--Inicio-->
+    <div class="page-header header-filter">
+      <div class="squares square1"></div>
+      <div class="squares square2"></div>
+      <div class="squares square3"></div>
+      <div class="squares square4"></div>
+      <div class="squares square5"></div>
+      <div class="squares square6"></div>
+      <div class="squares square7"></div>
+      <div class="container">
+        <div class="content-center brand">
+          <h1 class="h1-seo">EHRV•</h1>
+          <h3 class="typing">FullStack Developer em busca de inovaçoes</h3>
+        </div>
+      </div>
+    </div>
+
+    <!--Sobre-->
+    <div class="main">
+      <section id="about-me" class="text-center py-5">
+        <div class="container">
+          <h1 class="display-4 fw-bold mb-4" style="color: #e14eca;">SOBRE MIM:</h1>
+          <p class="display-5 mx-auto" style="max-width: 800px; color: #ffffff;">
+            Olá! Meu nome é Erich Valarini e desde criança meu fascínio por tecnologia, onde explorei HTML, CSS e JS para customizar
+            templates. Agora, aos 22 anos, estou pronto para aplicar minha paixão e experiência em projetos freelance de
+            criação de sites e sistemas web. Estudo constantemente para me aprimorar e acompanhar as tendências do
+            mercado, para assim gerar melhor desempenho para o usuário em meus projetos.
+          </p>
+        </div>
+      </section>
+
+      <div class="section section-basic" id="basic-elements">
+        <!--Carrousel-->
+        <div class="container">
+          <!--Itens do carrousel-->
+          <div class="marquee d-none d-lg-block justify-content-center align-items-center">
+            <div class="marquee-content">
+              <div class="marquee-item"><i class="devicon-html5-plain colored"></i></div>
+              <div class="marquee-item"><i class="devicon-css3-plain colored"></i></div>
+              <div class="marquee-item"><i class="devicon-javascript-plain colored"></i></div>
+              <div class="marquee-item"><i class="devicon-tailwindcss-original colored"></i></div>
+              <div class="marquee-item"><i class="devicon-nodejs-plain colored"></i></div>
+              <div class="marquee-item"><i class="devicon-react-original colored"></i></div>
+              <!-- Repetição para manter fluidez -->
+              <div class="marquee-item"><i class="devicon-mysql-original colored"></i></div>
+            </div>
+            <div class="marquee-content">
+              <div class="marquee-item"><i class="devicon-html5-plain colored"></i></div>
+              <div class="marquee-item"><i class="devicon-css3-plain colored"></i></div>
+              <div class="marquee-item"><i class="devicon-javascript-plain colored"></i></div>
+              <div class="marquee-item"><i class="devicon-tailwindcss-original colored"></i></div>
+              <div class="marquee-item"><i class="devicon-nodejs-plain colored"></i></div>
+              <div class="marquee-item"><i class="devicon-react-original colored"></i></div>
+              <!-- Repetição para manter fluidez -->
+              <div class="marquee-item"><i class="devicon-mysql-original colored"></i></div>
+            </div>
+          </div>
+
+
+        </div>
+        <!--Projeto-->
+        <div class="section section-examples" id="projects" data-background-color="black">
+          <img src="./erich/assets/img/path1.png" class="path">
+          <div class="space-50"></div>
+          <div class="container text-center">
+            <h3 class="display-3 text-white gap-3">Alguns dos meus projetos?</h3>
+
+            <div class="row">
+           
+              <div class="col-md-6 mb-4">
+                <img src="./erich/assets/img/dev-burguer.jpeg" alt="Projeto 1" class="img-raised img-fluid">
+                <div class="mt-3 d-flex flex-column align-items-center">
+                  <a href="https://github.com/Erich-z/Dev-Burguer-Web" target="_blank"
+                    class="btn btn-neutral btn-round">
+                    <i class="fab fa-github"></i> Ver Código
+                  </a>
+                  <a href="https://erich-z.github.io/Dev-Burguer-Web/" target="_blank"
+                    class="btn btn-success btn-round mt-2">
+                    <i class="tim-icons icon-laptop"></i> Live Demo
+                  </a>
+                </div>
+              </div>
+
+             
+              <div class="col-md-6 mb-4">
+                <img src="./erich/assets/img/studio-tatto.jpeg" alt="Projeto 2" class="img-raised img-fluid">
+                <div class="mt-3 d-flex flex-column align-items-center">
+                  <a href="https://github.com/matt-carmo/Illegal-Inc" target="_blank" class="btn btn-neutral btn-round">
+                    <i class="fab fa-github"></i> Ver Código
+                  </a>
+                  <a href="https://projetosenac.netlify.app/" target="_blank" class="btn btn-success btn-round mt-2">
+                    <i class="tim-icons icon-laptop"></i> Live Demo
+                  </a>
+                </div>
+              </div>
+
+             
+              <div class="col-md-6 mb-4">
+                <img src="./erich/assets/img/build-c.jpeg" alt="Projeto 3" class="img-raised img-fluid">
+                <div class="mt-3 d-flex flex-column align-items-center">
+                  <a href="https://github.com/Erich-z/huddle-landing-page-with-single-introductory-section-master-1-"
+                    target="_blank" class="btn btn-neutral btn-round">
+                    <i class="fab fa-github"></i> Ver Código
+                  </a>
+                  <a href="https://erich-z.github.io/huddle-landing-page-with-single-introductory-section-master-1-/"
+                    target="_blank" class="btn btn-success btn-round mt-2">
+                    <i class="tim-icons icon-laptop"></i> Live Demo
+                  </a>
+                </div>
+              </div>
+
+            
+              <div class="col-md-6 mb-4">
+                <img src="./erich/assets/img/sedans-suvs.jpeg" alt="Projeto 4" class="img-raised img-fluid">
+                <div class="mt-3 d-flex flex-column align-items-center">
+                  <a href="https://github.com/Erich-z/3-column-preview-card-component-main" target="_blank"
+                    class="btn btn-neutral btn-round">
+                    <i class="fab fa-github"></i> Ver Código
+                  </a>
+                  <a href="https://erich-z.github.io/3-column-preview-card-component-main/" target="_blank"
+                    class="btn btn-success btn-round mt-2">
+                    <i class="tim-icons icon-laptop"></i> Live Demo
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+        <!--Contato-->
+        <div class="section section-signup" id="contact">
+          <div class="container">
+            <div class="squares square-1"></div>
+            <div class="squares square-2"></div>
+            <div class="squares square-3"></div>
+            <div class="squares square-4"></div>
+            <div class="row row-grid justify-content-between align-items-center">
+              <div class="col-lg-6">
+                <h3 class="display-3 text-white">Gostou da apresentação?
+                  <span class="text-white">Entre em contato para discutir seu projeto!</span>
+                </h3>
+                <p class="text-white mb-3">Estou sempre em busca de novas ideias e desafios. Envie uma mensagem e vamos
+                  conversar sobre como posso ajudar no seu próximo projeto!</p>
+              </div>
+              <div class="col-lg-6 mb-lg-auto">
+                <div class="card card-register">
+                  <div class="card-header">
+                    <img class="card-img" src="assets/img/square1.png" alt="Card image">
+                    <h4 class="card-title" style="color: #ffffff; padding: 10px;">Contato</h4>
+                  </div>
+                  <div class="card-body">
+                    <form class="form">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">
+                            <i class="tim-icons icon-single-02"></i>
+                          </div>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Seu Nome" required>
+                      </div>
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">
+                            <i class="tim-icons icon-email-85"></i>
+                          </div>
+                        </div>
+                        <input type="email" class="form-control" placeholder="Seu E-mail" required>
+                      </div>
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">
+                            <i class="tim-icons icon-pencil"></i>
+                          </div>
+                        </div>
+                        <textarea class="form-control" placeholder="Sua Mensagem" rows="4" required></textarea>
+                      </div>
+                      <div class="card-footer">
+                        <button type="submit" class="btn btn-info btn-round btn-lg">Enviar Mensagem</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer bg-dark text-white py-4 mt-auto">
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-md-6">
+              <h5 class="mb-3">EHRV• Full Stack Developer</h5>
+              <p>&copy; 2025 Erich H Rinaldi. Todos os direitos reservados.</p>
+            </div>
+            <div class="col-md-6">
+              <h5 class="mb-3">Siga-me</h5>
+              <a href="https://wa.me/5518996220308" target="_blank" class="text-white mx-2"><i
+                  class="fab fa-whatsapp fa-lg"></i></a>
+              <a href="https://www.linkedin.com/in/erich-rinaldi-140205258/" target="_blank" class="text-white mx-2"><i
+                  class="fab fa-linkedin fa-lg"></i></a>
+              <a href="https://github.com/Erich-z" target="_blank" class="text-white mx-2"><i
+                  class="fab fa-github fa-lg"></i></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+
+
+
+      <!--   Core JS Files   -->
+      <script src="./erich/assets/js/core/jquery.min.js" type="text/javascript"></script>
+      <script src="./erich/assets/js/core/popper.min.js" type="text/javascript"></script>
+      <script src="./erich/assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+      <script src="./erich/assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+      <!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+      <script src="./erich/assets/js/plugins/bootstrap-switch.js"></script>
+      <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+      <script src="./erich/assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
+      <!-- Chart JS -->
+      <script src="./erich/assets/js/plugins/chartjs.min.js"></script>
+      <!--  Plugin for the DatePicker, full documentation here: https://github.com/uxsolutions/bootstrap-datepicker -->
+      <script src="./erich/assets/js/plugins/moment.min.js"></script>
+      <script src="./erich/assets/js/plugins/bootstrap-datetimepicker.js" type="text/javascript"></script>
+      <!-- Black Dashboard DEMO methods, don't include it in your project! -->
+      <script src="./erich/assets/demo/demo.js"></script>
+      <!-- Control Center for Black UI Kit: parallax effects, scripts for the example pages etc -->
+      <script src="./erich/assets/js/blk-design-system.min.js?v=1.0.0" type="text/javascript"></script>
+
+
+
+
+      <script>
+        $(document).ready(function () {
+          blackKit.initDatePicker();
+          blackKit.initSliders();
+        });
+
+
+
+
+      </script>
+</body>
+
+</html>
